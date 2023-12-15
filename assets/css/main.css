@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --pink: hsl(281, 83%, 54%); 
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-pink);
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+main {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/images/background-pattern-desktop.svg");
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: auto 1rem;
+    padding: 1.75rem;
+    background-color: var(--white);
+    border-radius: 1.25rem;
+    max-width: 28rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 1.75rem;
+}
+
+.card-header .star {
+    height: 2rem;
+    width: 2rem;
+}
+
+.accordion {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.accordion .faq {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.faq .question {
+    width: 100%;
+    padding: 1rem auto;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--dark-purple);
+    border: 0;
+    /* outline: none; */
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.answer {
+    display: none;
+    color: var(--grayish-purple);
+    transition: display 0.3s ease-in; /* Add transition for max-height */
+  }
+
+  .question:hover {
+    color: var(--pink);
+  }
+
+  .question:focus + .answer {
+    display: block;
+  }
+
+.attribution {
+    margin-top: auto;
+    padding-bottom: 0.75rem;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
